@@ -3,10 +3,8 @@ import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
-import Testimonials from "@/partials/Testimonials";
 import { Button, Feature } from "@/types";
 import { FaCheck } from "react-icons/fa/index.js";
-import Slider from "@/partials/Slider";
 import Image from 'next/image'
 
 
@@ -50,7 +48,7 @@ const Home = () => {
   return (
     <>
       <SeoMeta />
-      <Slider />
+
       
 
       <section className="section pt-10">

@@ -4,17 +4,17 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
-import { IoSearch } from "react-icons/io5/index.js";
+import { IoSearch } from "react-icons/io5";
 
-//  child navigation link interface
+// Child navigation link interface
 export interface IChildNavigationLink {
   name: string;
   url: string;
 }
 
-// navigation link interface
+// Navigation link interface
 export interface INavigationLink {
   name: string;
   url: string;
@@ -23,27 +23,21 @@ export interface INavigationLink {
 }
 
 const Header = () => {
-  // distructuring the main menu from menu object
   const { main }: { main: INavigationLink[] } = menu;
   const { navigation_button, settings } = config;
-  // Get current path
-  const pathname = usePathname();
+  const router = useRouter();
+  const { pathname } = router;
 
-  // scroll to top on route change
   useEffect(() => {
     window.scroll(0, 0);
   }, [pathname]);
 
   return (
-    <header
-      className={`header z-30 ${settings.sticky_header && "sticky top-0"}`}
-    >
+    <header className={`header z-30 ${settings.sticky_header && "sticky top-0"}`}>
       <nav className="navbar container">
-        {/* Logo */}
         <div className="order-0">
           <Logo />
         </div>
-        {/* Navbar toggler */}
         <input id="nav-toggle" type="checkbox" className="hidden" />
         <label
           id="show-button"
@@ -68,8 +62,6 @@ const Header = () => {
             ></polygon>
           </svg>
         </label>
-        {/* /Navbar toggler */}
-
         <ul
           id="nav-menu"
           className="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
@@ -80,12 +72,9 @@ const Header = () => {
                 <li className="nav-item nav-dropdown group relative">
                   <span
                     className={`nav-link inline-flex items-center ${
-                      menu.children?.map(({ url }) => url).includes(pathname) ||
-                      menu.children
-                        ?.map(({ url }) => `${url}/`)
-                        .includes(pathname)
-                        ? "active"
-                        : ""
+                      (menu.children?.map(({ url }) => url).includes(pathname) ||
+                        menu.children?.map(({ url }) => `${url}/`).includes(pathname)) &&
+                      "active"
                     }`}
                   >
                     {menu.name}
@@ -99,8 +88,7 @@ const Header = () => {
                         <Link
                           href={child.url}
                           className={`nav-dropdown-link block ${
-                            (pathname === `${child.url}/` ||
-                              pathname === child.url) &&
+                            (pathname === `${child.url}/` || pathname === child.url) &&
                             "active"
                           }`}
                         >
@@ -122,18 +110,17 @@ const Header = () => {
                       position: "relative",
                       overflow: "hidden",
                     }}
-                    onMouseEnter={() => handleMouseEnter(menu.url)}
-                    onMouseLeave={handleMouseLeave}
                   >
                     <span
-                      className={`bg-paradym absolute top-1 bottom-3 left-0 right-0 transform origin-top transition-transform duration-300 ${
-                        activeLink === menu.url ? "-skew-y-6" : ""
-                      }`}
-                      style={{
-                        zIndex: -1,
-                        transitionProperty: "transform",
-                      }}
-                    ></span>
+  className={`bg-paradym absolute top-1 bottom-3 left-0 right-0 transform origin-top transition-transform duration-300 ${
+    (pathname === `${menu.url}/` || pathname === menu.url) ? "-skew-y-6" : ""
+  }`}
+  style={{
+    zIndex: -1,
+    transitionProperty: "transform",
+  }}
+></span>
+
                     {menu.name}
                   </Link>
                 </li>
@@ -161,7 +148,7 @@ const Header = () => {
               <IoSearch />
             </Link>
           )}
-          <ThemeSwitcher className="mr-5" />
+          {/* <ThemeSwitcher className="mr-5" /> */}
           {navigation_button.enable && (
             <Link
               className="btn btn-outline-primary btn-sm hidden lg:inline-block"

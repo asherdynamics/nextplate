@@ -1,26 +1,25 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Next Project"
-  content: "Nextplate is a free starter template built with Next and TailwindCSS, providing everything you need to jumpstart your Next project and save valuable time."
-  image: "/images/banner.png"
+  title: "Empower Your Brand with Cutting-Edge Disposable Vapes"
+  content: "As a leading OEM and ODM disposable vape manufacturer, we provide the innovation and expertise to amplify your brand's presence. From sleek designs to unrivaled performance, our cutting-edge disposable vapes are the perfect canvas for your brand's identity. Elevate your market presence and captivate customers with our high-quality, customizable solutions. Partner with us and unleash the power of your brand today!"
+  image: "/images/paradym_logo-web.png"
   button:
     enable: true
-    label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/nextplate"
+    label: "Check out our catalog"
+    link: "/products"
 
 # Features
 features:
-  - title: "What's Included in Nextplate"
-    image: "/images/service-1.png"
-    content: "Nextplate is a comprehensive starter template that includes everything you need to get started with your Next project. What's Included in Nextplate"
+  - title: "Sleek and Stylish Design"
+    image: "/images/banners/Image_20230711091558.jpg"
+    content: "Our vape devices are not only technologically advanced but also visually stunning. Crafted with meticulous attention to detail, our designs exude sophistication and elegance. From the sleek lines to the premium materials, our devices are a reflection of your discerning taste. Elevate your vaping experience with a device that is as stylish as it is powerful."
     bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Next and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
+      - "Meticulous Attention to Detail: Each device is crafted with meticulous attention to detail, ensuring a flawless and sophisticated appearance"
+      - "Exuding Sophistication and Elegance: Our designs are a perfect blend of sophistication and elegance, elevating your vaping experience."
+      - "leek Lines: The sleek lines of our vape devices create a modern and streamlined aesthetic."
+      - "Premium Materials: We use only the finest materials, adding a touch of luxury to the design of our devices."
+      - "Reflecting Discerning Taste: Our vape devices are a reflection of your discerning taste, making a statement wherever you go."
     button:
       enable: false
       label: "Get Started Now"

@@ -19,11 +19,21 @@ const Contact = async () => {
         image={image}
       />
       <PageHeader title={title} />
-      <section className="section-sm">
+
+      <iframe
+    src="https://forms.zohopublic.com/plytechnology/form/ParadymLeadForm/formperma/ShuOLgaa0dw682vrU-JrGQWpH8IxvoMbz2ky4xgOBik"
+    width={"100%"}
+    height={600}
+    className="border-none"
+    ></iframe>
+      {/* <section className="section-sm">
         <div className="container">
           <div className="row">
             <div className="mx-auto md:col-10 lg:col-6">
               <form action={contact_form_action} method="POST">
+                <h2>Begin an Order</h2>
+              <div className="mb-6">Please feel free to reach out to us for pricing details, sample requests, and initiating an order. We will strive to respond to you promptly. Kindly note that our products are available for wholesale purchase, and we require verification of businesses for order processing.</div>
+
                 <div className="mb-6">
                   <label htmlFor="name" className="form-label">
                     Full Name <span className="text-red-500">*</span>
@@ -64,7 +74,7 @@ const Contact = async () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

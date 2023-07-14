@@ -1,8 +1,8 @@
 {
-  "facebook": "https://facebook.com/",
-  "twitter": "https://twitter.com/",
-  "mastodon": "https://mastodon.com/",
-  "instagram": "https://instagram.com/",
+  "facebook": "",
+  "twitter": "",
+  "mastodon": "",
+  "instagram": "",
   "youtube": "",
   "linkedin": "",
   "github": "",
@@ -25,8 +25,8 @@
   "tiktok": "",
   "foursquare": "",
   "rss": "",
-  "email": "",
-  "phone": "",
+  "email": "info@paradymusa.com",
+  "phone": "909-321-2816",
   "address": "",
   "skype": "",
   "website": ""

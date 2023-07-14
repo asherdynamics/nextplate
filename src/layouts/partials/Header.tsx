@@ -1,12 +1,11 @@
-"use client";
-
+'use client';
 import Logo from "@/components/Logo";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { IoSearch } from "react-icons/io5/index.js";
 
 export interface ChildNavigationLink {
@@ -22,22 +21,34 @@ export interface NavigationLink {
 }
 
 const Header = () => {
-  // distructuring the main menu from menu object
+  // Destructuring the main menu from the menu object
   const { main }: { main: NavigationLink[] } = menu;
   const { navigation_button, settings } = config;
-  // get current path
+  // Get current path
   const pathname = usePathname();
+  // State to track active link
+  const [activeLink, setActiveLink] = useState("");
+
+  // Function to handle mouse enter event
+  const handleMouseEnter = (url: string) => {
+    setActiveLink(url);
+  };
+
+  // Function to handle mouse leave event
+  const handleMouseLeave = () => {
+    setActiveLink("");
+  };
 
   return (
     <header
       className={`header z-30 ${settings.sticky_header && "sticky top-0"}`}
     >
       <nav className="navbar container">
-        {/* logo */}
+        {/* Logo */}
         <div className="order-0">
           <Logo />
         </div>
-        {/* navbar toggler */}
+        {/* Navbar toggler */}
         <input id="nav-toggle" type="checkbox" className="hidden" />
         <label
           id="show-button"
@@ -62,7 +73,7 @@ const Header = () => {
             ></polygon>
           </svg>
         </label>
-        {/* /navbar toggler */}
+        {/* /Navbar toggler */}
 
         <ul
           id="nav-menu"
@@ -108,11 +119,26 @@ const Header = () => {
                 <li className="nav-item">
                   <Link
                     href={menu.url}
-                    className={`nav-link block ${
+                    className={`nav-link block relative ${
                       (pathname === `${menu.url}/` || pathname === menu.url) &&
                       "active"
                     }`}
+                    style={{
+                      position: "relative",
+                      overflow: "hidden",
+                    }}
+                    onMouseEnter={() => handleMouseEnter(menu.url)}
+                    onMouseLeave={handleMouseLeave}
                   >
+                    <span
+                      className={`bg-paradym absolute top-1 bottom-3 left-0 right-0 transform origin-top transition-transform duration-300 ${
+                        activeLink === menu.url ? "-skew-y-6" : ""
+                      }`}
+                      style={{
+                        zIndex: -1,
+                        transitionProperty: "transform",
+                      }}
+                    ></span>
                     {menu.name}
                   </Link>
                 </li>
@@ -133,7 +159,7 @@ const Header = () => {
         <div className="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
           {settings.search && (
             <Link
-              className="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white"
+              className="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary"
               href="/search"
               aria-label="search"
             >

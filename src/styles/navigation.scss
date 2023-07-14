@@ -36,7 +36,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-link {
-  @apply block p-3 font-semibold text-dark transition hover:text-primary dark:text-darkmode-dark lg:px-2 lg:py-3;
+  @apply block font-semibold text-dark transition dark:text-darkmode-dark px-1;
 }
 
 .nav-dropdown {

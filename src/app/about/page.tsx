@@ -5,6 +5,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { RegularPage } from "@/types";
 
+
 const About = () => {
   const data: RegularPage = getListPage("pages/about.md");
   const { frontmatter, content } = data;
@@ -18,6 +19,8 @@ const About = () => {
         description={description}
         image={image}
       />
+      
+      
       <section className="section-sm">
         <div className="container">
           <div className="row justify-center">
@@ -39,6 +42,7 @@ const About = () => {
                 <MDXContent content={content} />
               </div>
             </div>
+    
           </div>
         </div>
       </section>

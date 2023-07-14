@@ -122,16 +122,16 @@ const Header = () => {
     overflow: "hidden",
   }}
 >
-  <span
-    className={`bg-paradym absolute top-1 bottom-3 left-0 right-0 transform origin-top transition-transform duration-300 ${
-      (pathname === `${menu.url}/` || pathname === menu.url) ? "-skew-y-6" : ""
-    }`}
-    style={{
-      zIndex: -1,
-      transitionProperty: "transform",
-    }}
-  ></span>
-  {menu.name}
+<span
+  className={`md:bg-paradym absolute max-w-xs top-1 bottom-3 left-0 right-0 transform origin-top transition-transform duration-300 ${
+    (pathname === `${menu.url}/` || pathname === menu.url) ? "-skew-y-6" : ""
+  } inline-block`}
+  style={{
+    zIndex: -1,
+    transitionProperty: "transform",
+  }}
+></span>
+{menu.name}
 </Link>
                 </li>
               )}

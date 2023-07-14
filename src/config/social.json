@@ -1,33 +1,24 @@
 {
-  "facebook": "",
-  "twitter": "",
-  "mastodon": "",
-  "instagram": "",
-  "youtube": "",
-  "linkedin": "",
-  "github": "",
-  "gitlab": "",
-  "discord": "",
-  "slack": "",
-  "medium": "",
-  "codepen": "",
-  "bitbucket": "",
-  "dribbble": "",
-  "behance": "",
-  "pinterest": "",
-  "soundcloud": "",
-  "tumblr": "",
-  "reddit": "",
-  "vk": "",
-  "whatsapp": "",
-  "snapchat": "",
-  "vimeo": "",
-  "tiktok": "",
-  "foursquare": "",
-  "rss": "",
-  "email": "info@paradymusa.com",
-  "phone": "909-321-2816",
-  "address": "",
-  "skype": "",
-  "website": ""
+  "main": [
+    {
+      "name": "facebook",
+      "icon": "FaFacebook",
+      "link": "https://www.facebook.com/"
+    },
+    {
+      "name": "twitter",
+      "icon": "FaTwitter",
+      "link": "https://twitter.com/"
+    },
+    {
+      "name": "github",
+      "icon": "FaGithub",
+      "link": "https://www.github.com/"
+    },
+    {
+      "name": "linkedin",
+      "icon": "FaLinkedin",
+      "link": "https://www.linkedin.com/"
+    }
+  ]
 }

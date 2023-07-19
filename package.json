@@ -31,13 +31,14 @@
     "react": "18.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
+    "react-fast-marquee": "^1.6.0",
     "react-gtm-module": "^2.0.11",
     "react-icons": "^4.10.1",
     "react-lite-youtube-embed": "^2.3.52",
+    "react-responsive-carousel": "^3.2.23",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
-    "sharp": "^0.32.1",
-    "swiper": "^10.0.4"
+    "sharp": "^0.32.1"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",

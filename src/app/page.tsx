@@ -52,28 +52,28 @@ const Home = () => {
       <Marquee
       className="bg-paradym"
       >
-        <div className="marquee-text  text-black md:text-5xl md:font-extrabold py-2 md:py-4 mx-4">
+        <div className="marquee-text  text-black text-2xl md:text-5xl font-extrabold py-2 md:py-4 mx-4">
           OEM
         </div>
-        <div className="marquee-text  text-black md:text-5xl md:font-extrabold py-2 md:py-4 mx-4">
+        <div className="marquee-text  text-black text-2xl md:text-5xl font-extrabold py-2 md:py-4 mx-4">
           ODM
         </div>
-        <div className="marquee-text  text-black md:text-5xl md:font-extrabold py-2 md:py-4 mx-4">
+        <div className="marquee-text  text-black text-2xl md:text-5xl font-extrabold py-2 md:py-4 mx-4">
          DISTRIBUTION
         </div>
-        <div className="marquee-text  text-black md:text-5xl md:font-extrabold py-2 md:py-4 mx-4">
+        <div className="marquee-text  text-black text-2xl md:text-5xl font-extrabold py-2 md:py-4 mx-4">
           PACKAGING
         </div>
-        <div className="marquee-text  text-black md:text-5xl md:font-extrabold py-2 md:py-4 mx-4">
+        <div className="marquee-text  text-black text-2xl md:text-5xl font-extrabold py-2 md:py-4 mx-4">
           DESIGN
         </div>
-        <div className="marquee-text  text-black md:text-5xl md:font-extrabold py-2 md:py-4 mx-4">
+        <div className="marquee-text  text-black text-2xl md:text-5xl font-extrabold py-2 md:py-4 mx-4">
           EXPERIENCE
         </div>
-        <div className="marquee-text  text-black md:text-5xl md:font-extrabold py-2 md:py-4 mx-4">
+        <div className="marquee-text  text-black text-2xl md:text-5xl font-extrabold py-2 md:py-4 mx-4">
           PRICING
         </div>
-        <div className="marquee-text  text-black md:text-5xl md:font-extrabold py-2 md:py-4 mx-4">
+        <div className="marquee-text  text-black text-2xl md:text-5xl font-extrabold py-2 md:py-4 mx-4">
           CUSTOMER SUPPORT
         </div>
       </Marquee>

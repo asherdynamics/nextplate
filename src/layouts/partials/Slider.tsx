@@ -15,10 +15,6 @@ export default function Slider() {
         <Image src="/images/banners/nebula-banner.png" alt="Slide 1" width={1600} height={800} />
         {/* <p className="legend">Slide 2</p> */}
       </div>
-      <div>
-        <Image src="/images/banners/nebula-banner.png" alt="Slide 1" width={1600} height={800} />
-        {/* <p className="legend">Slide 3</p> */}
-      </div>
     </Carousel>
   );
 }

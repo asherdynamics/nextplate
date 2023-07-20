@@ -1,4 +1,5 @@
-'use client';
+"use client";
+
 import Logo from "@/components/Logo";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import config from "@/config/config.json";
@@ -26,7 +27,7 @@ const Header = () => {
   // distructuring the main menu from menu object
   const { main }: { main: INavigationLink[] } = menu;
   const { navigation_button, settings } = config;
-  // Get current path
+  // get current path
   const pathname = usePathname();
 
   // scroll to top on route change
@@ -39,11 +40,11 @@ const Header = () => {
       className={`header z-30 ${settings.sticky_header && "sticky top-0"}`}
     >
       <nav className="navbar container">
-        {/* Logo */}
+        {/* logo */}
         <div className="order-0">
           <Logo />
         </div>
-        {/* Navbar toggler */}
+        {/* navbar toggler */}
         <input id="nav-toggle" type="checkbox" className="hidden" />
         <label
           id="show-button"
@@ -68,7 +69,7 @@ const Header = () => {
             ></polygon>
           </svg>
         </label>
-        {/* /Navbar toggler */}
+        {/* /navbar toggler */}
 
         <ul
           id="nav-menu"
@@ -113,26 +114,14 @@ const Header = () => {
               ) : (
                 <li className="nav-item">
                   <Link
-  href={menu.url}
-  className={`nav-link block relative ${
-    (pathname === `${menu.url}/` || pathname === menu.url) ? "active" : ""
-  }`}
-  style={{
-    position: "relative",
-    overflow: "hidden",
-  }}
->
-<span
-  className={`md:bg-paradym absolute max-w-xs top-1 bottom-3 left-0 right-0 transform origin-top transition-transform duration-300 ${
-    (pathname === `${menu.url}/` || pathname === menu.url) ? "-skew-y-6" : ""
-  } inline-block`}
-  style={{
-    zIndex: -1,
-    transitionProperty: "transform",
-  }}
-></span>
-{menu.name}
-</Link>
+                    href={menu.url}
+                    className={`nav-link block ${
+                      (pathname === `${menu.url}/` || pathname === menu.url) &&
+                      "active"
+                    }`}
+                  >
+                    {menu.name}
+                  </Link>
                 </li>
               )}
             </React.Fragment>
@@ -151,7 +140,7 @@ const Header = () => {
         <div className="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
           {settings.search && (
             <Link
-              className="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary"
+              className="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white"
               href="/search"
               aria-label="search"
             >
